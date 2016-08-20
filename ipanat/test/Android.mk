@@ -1,3 +1,4 @@
+ifneq ($(TARGET_HAS_IPA_IN_DEVTREE), true)
 BOARD_PLATFORM_LIST := msm8916
 BOARD_PLATFORM_LIST += msm8909
 ifneq ($(call is-board-platform-in-list,$(BOARD_PLATFORM_LIST)),true)
@@ -51,3 +52,4 @@ include $(BUILD_EXECUTABLE)
 endif # $(TARGET_ARCH)
 endif
 endif
+endif # $(TARGET_HAS_IPA_IN_DEVTREE)
